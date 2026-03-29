@@ -1,6 +1,6 @@
 # tja
 
-One card from Oblique Strategies, every time.
+Show random card from Oblique Strategies.
 
 ## Install
 

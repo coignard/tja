@@ -25,7 +25,7 @@ enum Lang {
 }
 
 #[derive(Parser, Debug)]
-#[command(author, version, about = "Oblique Strategies — one card at a time")]
+#[command(author, version, about = "Show random card from Oblique Strategies")]
 struct Cli {
     #[arg(long, default_value = "en")]
     lang: Lang,
