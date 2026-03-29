@@ -1,0 +1,31 @@
+[package]
+name = "tja"
+version = "0.1.0"
+authors = [
+    "René Coignard <contact@renecoignard.com>"
+]
+edition = "2024"
+rust-version = "1.87"
+license = "GPL-3.0-or-later"
+description = "Oblique Strategies — one card at a time"
+homepage = "https://coignard.org/tja"
+repository = "https://github.com/coignard/tja"
+readme = "README.md"
+keywords = ["music", "creativity"]
+categories = ["command-line-utilities"]
+exclude = [".github/*"]
+
+[[bin]]
+name = "tja"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.6.0", features = ["derive"] }
+rand = "0.10.0"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
+opt-level = 3
